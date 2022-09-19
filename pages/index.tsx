@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { 
   ArrowTopRightOnSquareIcon, 
@@ -12,7 +13,7 @@ import {
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="relative">
+      <div className="relative mt-8">
         <div className="absolute inset-x-8 bottom-0 h-1/2 bg-gray-100 rounded-3xl" />
           <div className="mx-auto max-w-9xl sm:px-6 lg:px-8">
             <div className="relative shadow-xl sm:overflow-hidden sm:rounded-3xl">
@@ -29,23 +30,25 @@ const Home: NextPage = () => {
                   <span className="block text-white">Rob &amp; Molly are</span>
                   <span className="block text-orange-300 mb-24"><em>getting married!</em></span>
                 </h1>
-                <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-200 sm:max-w-3xl">
+                <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
                   Rob &amp; Molly will be tying the knot on August 20th, 2023 in Asbury Park, NJ, and would love for you to attend.
                 </p>
                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                   <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
-                    <a
+                    <Link
                       href="/rsvp"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8"
                     >
-                      RSVP
-                    </a>
-                    <a
+                      <a className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8">
+                        RSVP
+                      </a>
+                    </Link>
+                    <Link
                       href="/schedule"
-                      className="flex items-center justify-center rounded-md border border-transparent bg-blue-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                     >
-                      Our Wedding Day
-                    </a>
+                      <a className="flex items-center justify-center rounded-md border border-transparent bg-blue-700 bg-opacity-80 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8">
+                        Our Wedding Day
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -71,11 +74,12 @@ const Home: NextPage = () => {
               <div className="mt-8">
                 <div className="inline-flex rounded-md shadow">
                   <a
-                    href="#"
+                    download
+                    href="/rob-and-molly-wedding-invite.ics"
                     className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
                   >
-                    Save the our date to your calender
-                    <CalendarDaysIcon className="-mr-1 ml-3 h-5 w-5 text-gray-400" aria-hidden="true" />
+                    Save the date to your calender
+                    <CalendarDaysIcon className="-mr-1 ml-3 h-5 w-5 text-gray-700" aria-hidden="true" />
                   </a>
                 </div>
               </div>

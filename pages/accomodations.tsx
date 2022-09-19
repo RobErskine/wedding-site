@@ -14,7 +14,7 @@ const locations = [
     name: 'The Asbury Hotel',
     role: '(Our Wedding Venue, Room Block Details to Come)',
     imageUrl:
-      '/accomodations/hotel-asbury-park-nj-webcam-450x375-01.jpeg',
+      '/accomodations/hotel.jpeg',
     bio: 'With a history shaped by artistic rebels and rock ‘n’ roll legends, the Asbury Park hotel sets the stage for an out-of-the-box getaway.',
     websiteUrl: 'https://www.theasburyhotel.com/',
     googleMapsUrl: 'https://www.google.com/maps/dir//The+Asbury+Hotel,+210+Fifth+Ave,+Asbury+Park,+NJ+07712/@40.2236111,-74.0038554,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c2266a4633c6af:0xe5cfe7d64c5ba075!2m2!1d-74.0016667!2d40.2236111!3e0',

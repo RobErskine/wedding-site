@@ -35,6 +35,7 @@ function classNames(...classes) {
 export default function Layout({ children }) {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false)
+  const [open, setOpen] = useState(false)
 
   const currentSlug = router.asPath;
   console.log({ currentSlug })
@@ -49,6 +50,7 @@ export default function Layout({ children }) {
         <body class="h-full">
         ```
       */}
+
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -162,7 +164,7 @@ export default function Layout({ children }) {
                     href={item.href}
                   >
                     <a className={classNames(
-                      currentSlug === item.href  ? 'bg-gray-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
+                      currentSlug === item.href  ? 'bg-orange-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                       'group flex items-center px-2 py-2 text-sm font-medium rounded-md w-full block'
                     )}>
                       <item.icon
@@ -179,8 +181,8 @@ export default function Layout({ children }) {
               </nav>
             </div>
             <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-              <Link href="/our-story" className="group block w-full flex-shrink-0">
-                <div className="flex items-center">
+              <Link href="/our-story" className="group block w-full flex-shrink-0 cursor-pointer">
+                <div className="flex items-center cursor-pointer">
                   <div>
                     <img
                       className="inline-block h-9 w-9 rounded-full"
@@ -188,7 +190,7 @@ export default function Layout({ children }) {
                       alt=""
                     />
                   </div>
-                  <div className="ml-3">
+                  <div className="ml-3 cursor-pointer">
                     <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900"><em>via</em> Rob &amp; Molly</p>
                     <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">Read our story</p>
                   </div>
@@ -209,10 +211,10 @@ export default function Layout({ children }) {
             </button>
           </div>
           <main className="flex-1">
-            <div className="py-6">
-              <div className="mx-auto max-w-9xl px-4 sm:px-6 md:px-8">
+            <div className="">
+              <div className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
                 {/* Replace with your content */}
-                <div className="py-4">
+                <div className="">
                   {children}
                 </div>
                 {/* /End replace */}
@@ -235,7 +237,7 @@ export default function Layout({ children }) {
             </div>
           ))}
         </nav>
-        <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 || Built by hand with ❤️ by Rob, for Molly</p>
+        <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 || Built by hand with ❤️ by Rob &amp; Molly</p>
       </div>
     </footer>
     </>

@@ -33,16 +33,13 @@ const faqs = [
 const FAQ: NextPage = () => {
   return (
     <div>
-      <h1 className="text-3xl font-bold">
-        Frequently Asked Questions
-      </h1>
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900">Ooo wee, what's up with that?</h2>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900">Ooo wee,<br/> what’s up with that?</h2>
               <p className="mt-4 text-lg text-gray-500">
-                We get it. Weddings are hard. Here are some of the most common questions we've received. Have a question not listed here?{' '}
+                We get it. Weddings are hard. Here are some of the most common questions we’ve received. Have a question not listed here?{' '}
                 <a href="mailto:us@robandmolly.us" className="font-medium text-blue-600 hover:text-blue-500">
                   <br/>Shoot us a note at <span className="underline">us@robandmolly.us</span>
                 </a>{' '}

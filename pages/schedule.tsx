@@ -8,195 +8,77 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
+const features = [
+  {
+    name: 'The Ceremony',
+    time: '3:00 PM',
+    location: 'Baronet Rooftop at the Asbury Hotel',
+    description: 'The ceremony will start promptly at 3:30. We request that guests arrive at 3:00 to allow enough time to access the elevator to get to our rooftop ceremony.',
+    imageSrc: '/events/rooftopphoto.jpg',
+    imageAlt: 'Rooftop of the Asbury Hotel where will be getting married',
+  },
+  {
+    name: 'The Reception',
+    time: '4:00 PM - 9:00 PM',
+    location: 'The Hall & Terrace at the Asbury Hotel',
+    description:
+      'Cocktails, dinner, and dancing will follow the ceremony',
+    imageSrc: '/events/hotel.webp',
+    imageAlt: 'The Reception Hall at the Asbury Hotel',
+  },
+  {
+    name: 'The After Party',
+    time: '9:00 PM - Whenever Rob needs to go to bed',
+    location: 'Johnny Mac\'s House of Spirits', 
+    description:
+      'Shuttles will be provided from the Asbury Hotel to the bar',
+    imageSrc: '/events/johnnymac.jpg',
+    imageAlt: 'Johnny Mac House of Spirits bar',
+  },
+]
+
 const Schedule: NextPage = () => {
-  const container = useRef(null)
-  const containerNav = useRef(null)
-  const containerOffset = useRef(null)
 
   return (
-    <div>
-      <h1 className="text-3xl font-bold mb-4">
-        Sunday, August 20th, 2023
-      </h1>
-      <div className="flex w-full flex-auto max-w-7xl m-auto rounded-3xl">
-            <div className="w-14 flex-none bg-white ring-1 ring-gray-100" />
-            <div className="grid flex-auto grid-cols-1 grid-rows-1">
-              {/* Horizontal lines */}
-              <div
-                className="col-start-1 col-end-2 row-start-1 grid divide-y divide-gray-100"
-                style={{ gridTemplateRows: 'repeat(48, minmax(3.5rem, 1fr))' }}
-              >
-                <div ref={containerOffset} className="row-end-1 h-7"></div>
-                
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    6AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    7AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    8AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    9AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    10AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    11AM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    12PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    1PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    2PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    3PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    4PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    5PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    6PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    7PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    8PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    9PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    10PM
-                  </div>
-                </div>
-                <div />
-                <div>
-                  <div className="sticky left-0 -mt-2.5 -ml-14 w-14 pr-2 text-right text-xs leading-5 text-gray-400">
-                    11PM
-                  </div>
-                </div>
-                <div />
-              </div>
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sunday, August 20th, 2023</h2>
+          <p className="mt-4 text-gray-500">
+            Please join us in celebrating our wedding!
+          </p>
+        </div>
 
-              {/* Events */}
-              <ol
-                className="col-start-1 col-end-2 row-start-1 grid grid-cols-1"
-                style={{ gridTemplateRows: '1.75rem repeat(288, minmax(0, 1fr)) auto' }}
+        <div className="mt-16 space-y-16">
+          {features.map((feature, featureIdx) => (
+            <div
+              key={feature.name}
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8"
+            >
+              <div
+                className={classNames(
+                  featureIdx % 2 === 0 ? 'lg:col-start-1' : 'lg:col-start-8 xl:col-start-9',
+                  'mt-6 lg:mt-0 lg:row-start-1 lg:col-span-5 xl:col-span-4'
+                )}
               >
-                <li className="relative mt-px flex" style={{ gridRow: '2 / span 8' }}>
-                  <a
-                    href="#"
-                    className="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-blue-50 p-2 text-xs leading-5 hover:bg-blue-100"
-                  >
-                    <p className="order-1 font-semibold text-blue-700">Molly's alarm to wake up. Starts to get pampered</p>
-                    <p className="text-blue-500 group-hover:text-blue-700">
-                      <time dateTime="2022-01-22T06:00">6:00 AM</time>
-                    </p>
-                  </a>
-                </li>
-                <li className="relative mt-px flex" style={{ gridRow: '50 / span 8' }}>
-                  <a
-                    href="#"
-                    className="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-orange-50 p-2 text-xs leading-5 hover:bg-orange-100"
-                  >
-                    <p className="order-1 font-semibold text-orange-700">Rob to start to think about getting out of bed</p>
-                    {/* <p className="order-1 text-orange-500 group-hover:text-orange-700">
-                      John F. Kennedy International Airport
-                    </p> */}
-                    <p className="text-orange-500 group-hover:text-orange-700">
-                      <time dateTime="2022-01-22T07:30">10:00 AM</time>
-                    </p>
-                  </a>
-                </li>
-                <li className="relative mt-px flex" style={{ gridRow: '62 / span 16' }}>
-                  <a
-                    href="#"
-                    className="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-orange-50 p-2 text-xs leading-5 hover:bg-orange-100"
-                  >
-                    <p className="order-1 font-semibold text-orange-700">Rob goes golfing for the first and only time in his life</p>
-                    {/* <p className="order-1 text-orange-500 group-hover:text-orange-700">
-                      John F. Kennedy International Airport
-                    </p> */}
-                    <p className="text-orange-500 group-hover:text-orange-700">
-                      <time dateTime="2022-01-22T07:30">10:00 AM</time>
-                    </p>
-                  </a>
-                </li>
-                <li className="relative mt-px flex" style={{ gridRow: '134 / span 18' }}>
-                  <a
-                    href="#"
-                    className="group absolute inset-1 flex flex-col overflow-y-auto rounded-lg bg-indigo-50 p-2 text-xs leading-5 hover:bg-indigo-100"
-                  >
-                    <p className="order-1 font-semibold text-indigo-700">Sightseeing</p>
-                    <p className="order-1 text-indigo-500 group-hover:text-indigo-700">Eiffel Tower</p>
-                    <p className="text-indigo-500 group-hover:text-indigo-700">
-                      <time dateTime="2022-01-22T11:00">11:00 AM</time>
-                    </p>
-                  </a>
-                </li>
-              </ol>
+                <h2 className="text-blue-400">{feature.time}</h2>
+                <h3 className="text-2xl font-medium text-gray-900">{feature.name}</h3>
+                <p className="mt-2 text-sm text-gray-500">{feature.description}</p>
+              </div>
+              <div
+                className={classNames(
+                  featureIdx % 2 === 0 ? 'lg:col-start-6 xl:col-start-5' : 'lg:col-start-1',
+                  'flex-auto lg:row-start-1 lg:col-span-7 xl:col-span-8'
+                )}
+              >
+                <div className="aspect-w-5 aspect-h-2 overflow-hidden rounded-lg bg-gray-100">
+                  <img src={feature.imageSrc} alt={feature.imageAlt} className="object-cover object-center" />
+                </div>
+              </div>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
