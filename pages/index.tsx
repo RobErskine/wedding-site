@@ -2,7 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { ArrowTopRightOnSquareIcon, CalendarDaysIcon } from '@heroicons/react/20/solid'
+import { 
+  ArrowTopRightOnSquareIcon, 
+  CalendarDaysIcon,
+  MapIcon,
+  GlobeAltIcon
+} from '@heroicons/react/20/solid'
 
 const Home: NextPage = () => {
   return (
@@ -17,12 +22,12 @@ const Home: NextPage = () => {
                   src="/homepage/homepage.png"
                   alt="People working on laptops"
                 />
-                <div className="absolute inset-0 bg-blue-700 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-blue-400 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
                 <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">Rob &amp; Molly are getting</span>
-                  <span className="block text-orange-300">getting Married!</span>
+                  <span className="block text-white">Rob &amp; Molly are</span>
+                  <span className="block text-orange-300 mb-24"><em>getting married!</em></span>
                 </h1>
                 <p className="mx-auto mt-6 max-w-lg text-center text-xl text-blue-200 sm:max-w-3xl">
                   Rob &amp; Molly will be tying the knot on August 20th, 2023 in Asbury Park, NJ, and would love for you to attend.
@@ -30,13 +35,13 @@ const Home: NextPage = () => {
                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                   <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
                     <a
-                      href="#"
+                      href="/rsvp"
                       className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8"
                     >
-                      Soft RSVP
+                      RSVP
                     </a>
                     <a
-                      href="#"
+                      href="/schedule"
                       className="flex items-center justify-center rounded-md border border-transparent bg-blue-500 bg-opacity-60 px-4 py-3 text-base font-medium text-white shadow-sm hover:bg-opacity-70 sm:px-8"
                     >
                       Our Wedding Day
@@ -54,12 +59,12 @@ const Home: NextPage = () => {
               src="/homepage/closeup.png"
               alt=""
             />
-            <div className="absolute inset-0 bg-blue-700 mix-blend-multiply rounded-3xl" />
+            <div className="absolute inset-0 bg-blue-400 mix-blend-multiply rounded-3xl" />
           </div>
           <div className="relative mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <div className="md:ml-auto md:w-1/2 md:pl-10">
               <h2 className="text-lg font-semibold text-gray-500">We can't wait to celebrate with you on...</h2>
-              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl">Sunday, August 20th, 2023!</p>
+              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023!</em></p>
               <p className="mt-3 text-lg text-gray-700">
                 We are getting married at the Asbury Park Hotel in Asbury, NJ. We can't wait to celebrate with you!
               </p>

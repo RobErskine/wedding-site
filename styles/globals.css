@@ -2,12 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "serif";
+  src: url("/fonts/BadScript-Regular.ttf") format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+em {
+  font-style: italic;
+  font-family: georgia;
 }
 
 a {

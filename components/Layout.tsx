@@ -14,7 +14,7 @@ import {
   ShoppingBagIcon
 } from '@heroicons/react/24/outline'
 
-import { Bottom } from '../components/Footer'
+import Bottom from '../components/Footer'
 
 import { useRouter } from 'next/router';
 
@@ -97,11 +97,7 @@ export default function Layout({ children }) {
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div className="flex flex-shrink-0 items-center px-4">
-                      <img
-                        className="h-8 w-auto"
-                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                        alt="Your Company"
-                      />
+                      <Link href="/"><img src="/logo.png" alt="Rob and Molly"/></Link>
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
@@ -128,18 +124,18 @@ export default function Layout({ children }) {
                     </nav>
                   </div>
                   <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-                    <a href="#" className="group block flex-shrink-0">
+                    <a href="/our-story" className="group block flex-shrink-0">
                       <div className="flex items-center">
                         <div>
                           <img
                             className="inline-block h-10 w-10 rounded-full"
-                            src="/homepage/homepage.png"
+                            src="/rob-and-molly-profile.jpg"
                             alt=""
                           />
                         </div>
                         <div className="ml-3">
-                          <p className="text-base font-medium text-gray-700 group-hover:text-gray-900">Tom Cook</p>
-                          <p className="text-sm font-medium text-gray-500 group-hover:text-gray-700">View profile</p>
+                          <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900"><em>via</em> Rob &amp; Molly</p>
+                          <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">Read our story</p>
                         </div>
                       </div>
                     </a>
@@ -152,12 +148,12 @@ export default function Layout({ children }) {
         </Transition.Root>
 
         {/* Static sidebar for desktop */}
-        <div className="hidden md:fixed md:flex md:w-64 md:flex-col translate-y-1/2 ml-8">
+        <div className="hidden md:fixed md:flex md:w-64 md:flex-col translate-y-1/2 ml-8 -mt-24">
           {/* Sidebar component, swap this element with another sidebar if you like */}
           <div className="flex flex-1 flex-col border border-gray-200 bg-white rounded-3xl align-middle">
             <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
               <div className="flex flex-shrink-0 items-center px-4">
-                <h1>Rob &amp; Molly</h1>
+                <Link href="/"><img src="/logo.png" className="p-2 cursor-pointer" alt="Rob and Molly"/></Link>
               </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
                 {navigation.map((item) => (
@@ -183,7 +179,7 @@ export default function Layout({ children }) {
               </nav>
             </div>
             <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-              <a href="#" className="group block w-full flex-shrink-0">
+              <Link href="/our-story" className="group block w-full flex-shrink-0">
                 <div className="flex items-center">
                   <div>
                     <img
@@ -197,7 +193,7 @@ export default function Layout({ children }) {
                     <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">Read our story</p>
                   </div>
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -225,7 +221,23 @@ export default function Layout({ children }) {
           </main>
         </div>
       </div>
-      {/* <Bottom/> */}
+      <Bottom/>
+      <footer className="bg-white">
+      <div className="mx-auto max-w-7xl overflow-hidden py-12 px-4 sm:px-6 lg:px-8">
+        <nav className="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+          {navigation.map((item) => (
+            <div key={item.name} className="px-5 py-2">
+              <Link href={item.href} className="text-base text-gray-300 hover:text-gray-900">
+                <a>
+                  {item.name}
+                </a>
+              </Link>
+            </div>
+          ))}
+        </nav>
+        <p className="mt-8 text-center text-base text-gray-400">&copy; 2022 || Built by hand with ❤️ by Rob, for Molly</p>
+      </div>
+    </footer>
     </>
   )
 }
