@@ -112,7 +112,7 @@ const Travel: NextPage = () => {
           <div className="relative mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:px-8 mt-12">
             <div className="relative lg:grid lg:grid-cols-3 lg:gap-x-8">
               <div className="lg:col-span-1">
-                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Automobiles</h2>
+                <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"><em className="font-black">&amp;</em> Automobiles</h2>
                 <p></p>
               </div>
               <dl className="mt-10 space-y-10 sm:grid sm:grid-cols-2 sm:gap-x-8 sm:gap-y-10 sm:space-y-0 lg:col-span-2 lg:mt-0">
