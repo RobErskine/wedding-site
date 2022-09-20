@@ -6,6 +6,7 @@ import {
   ArrowTopRightOnSquareIcon, 
   CalendarDaysIcon,
   MapIcon,
+  MapPinIcon,
   GlobeAltIcon
 } from '@heroicons/react/20/solid'
 
@@ -46,7 +47,6 @@ const locations = [
     websiteUrl: 'https://asburyempress.com/',
     googleMapsUrl: 'https://www.google.com/maps/place/The+Empress+Hotel/@40.2187018,-74.0033843,17z/data=!3m1!4b1!4m8!3m7!1s0x89c226416be2552b:0x68a1e7be0182068f!5m2!4m1!1i2!8m2!3d40.2186944!4d-74.0011346',
   }
-  // More people...
 ]
 
 const Accomodations: NextPage = () => {
@@ -73,7 +73,7 @@ const Accomodations: NextPage = () => {
                 <li key={location.name} className="sm:py-8">
                   <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
                     <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                      <Image className="rounded-lg object-cover shadow-lg" src={location.imageUrl} alt="" />
+                      <img className="rounded-lg object-cover shadow-lg" src={location.imageUrl} alt="" />
                     </div>
                     <div className="sm:col-span-2">
                       <div className="space-y-4">
@@ -86,15 +86,15 @@ const Accomodations: NextPage = () => {
                         </div>
                         <ul role="list" className="flex space-x-5">
                           <li>
-                            <a href={location.websiteUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" href={location.websiteUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">Website for {location.name}</span>
                               <GlobeAltIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
                           </li>
                           <li>
-                            <a href={location.googleMapsUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" href={location.googleMapsUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">Website for {location.name}</span>
-                              <MapIcon className="h-5 w-5" aria-hidden="true" />
+                              <MapPinIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
                           </li>
                         </ul>
@@ -120,6 +120,7 @@ const Accomodations: NextPage = () => {
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">There are a range of short-term vacation rentals and boutique inns in the area that may also be of interest to you.</p>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">We recommend opening your search to the following towns: Asbury Park, Ocean Grove, Bradley Beach, Belmar, Avon by the Sea, Sea Girt, Manasquan and Long Branch.</p>
           </div>
+          <iframe src="https://www.airbnb.com/wishlists/v/1164654977" className="w-full h-full"></iframe>
         </div>
       </div>
     </div>

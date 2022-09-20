@@ -2,6 +2,30 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Countdown from 'react-countdown';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
+
+const homepageImages = [
+  {
+    src: '/homepage/1.png',
+  },
+  {
+    src: '/homepage/2.png',
+  },
+  {
+    src: '/homepage/3.png',
+  },
+  {
+    src: '/homepage/4.png',
+  },
+  {
+    src: '/homepage/5.png',
+  },
+  {
+    src: '/homepage/6.png'
+  }
+]
 
 import { 
   ArrowTopRightOnSquareIcon, 
@@ -31,7 +55,7 @@ const Home: NextPage = () => {
                   <span className="block text-orange-300 mb-24"><em>getting married!</em></span>
                 </h1>
                 <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
-                  Rob &amp; Molly will be tying the knot on August 20th, 2023 in Asbury Park, NJ, and would love for you to attend.
+                  We hope you can join us on August 20th, 2023 in Asbury Park, NJ.
                 </p>
                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
                   <div className="space-y-4 sm:mx-auto sm:inline-grid sm:grid-cols-2 sm:gap-5 sm:space-y-0">
@@ -66,10 +90,16 @@ const Home: NextPage = () => {
           </div>
           <div className="relative mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <div className="md:ml-auto md:w-1/2 md:pl-10">
-              <h2 className="text-lg font-semibold text-gray-500">We can&apos;t wait to celebrate with you on...</h2>
-              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023!</em></p>
+              {/* <h2 className="text-lg font-semibold text-gray-500">We can&apos;t wait to celebrate with you on...</h2> */}
+              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023</em></p>
               <p className="mt-3 text-lg text-gray-700">
-                We are getting married at the Asbury Park Hotel in Asbury, NJ. We can&apos;t wait to celebrate with you!
+                We can't wait to celebrate with you  
+                <Countdown 
+                  date={'2023-08-23T15:30:00-04:00'} 
+                  renderer={props => <span> in only {props?.days} days, {props?.hours} hours, {props?.minutes} minutes, and {props?.seconds} seconds!</span>}
+                >
+                  <span> today!</span>
+                </Countdown>
               </p>
               <div className="mt-8">
                 <div className="inline-flex rounded-md shadow">
@@ -83,6 +113,27 @@ const Home: NextPage = () => {
                   </a>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative bg-gray-100 lg:mx-8 rounded-3xl mt-8 overflow-hidden">
+          <Carousel 
+            className="max-w-3xl rounded-lg"
+            showThumbs={false}
+            showStatus={false}
+            autoPlay={false}
+            infiniteLoop={true}
+          >
+          {homepageImages.map((image) => (
+            <div key={image.src}>
+              <img src={image.src} alt="" />
+            </div>
+          ))}
+          </Carousel>
+          <div className="relative mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
+            <div className="md:ml-auto md:w-1/3 md:pl-16 md:absolute md:right-0 md:h-full">
+              <h3>wow</h3>
             </div>
           </div>
         </div>

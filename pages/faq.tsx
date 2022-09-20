@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'Where should I stay and for how long?',
-    answer: 'We have a block of rooms at the Asbury Hotel, which is where the wedding will be held.  We have a block of rooms for Friday, Saturday, and Sunday nights.  If you are traveling from out of state, we recommend staying for the weekend.'
+    answer: 'Check out our accommodations page! We will be organizing a room block at the Asbury Hotel soon (too early to do so now) for those who don\'t plan on staying a while. We\'re hoping that a lot of our out of town guests can make a mini-vacation out of our wedding weekend, so would recommend booking a local AIrBnb or house rental in the area.'
   },
   {
     question: 'What should I do if I cannot make it?',
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     question: 'Can I bring a plus one?',
-    answer: 'All guests will have a choice of their preferred meal the day of the event. Please let the server or wait staff know of any allergies or restrictions so they can accommodate.'
+    answer: 'Unfortunately we are limited and can only accommodate those specified on the invitation.'
   },
   {
     question: 'Are children welcome?',
