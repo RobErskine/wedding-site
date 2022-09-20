@@ -1,5 +1,6 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   Bars3Icon,
@@ -28,17 +29,20 @@ const navigation = [
   { name: 'Registry', href: '/registry', icon: ShoppingBagIcon, current: false },
 ]
 
-function classNames(...classes) {
+function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ')
 }
 
-export default function Layout({ children }) {
+type Props = {
+  children: React.ReactNode
+}
+
+export default function Layout({ children }: Props) {
   const router = useRouter();
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [open, setOpen] = useState(false)
 
   const currentSlug = router.asPath;
-  console.log({ currentSlug })
 
   return (
     <>
@@ -99,7 +103,9 @@ export default function Layout({ children }) {
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div className="flex flex-shrink-0 items-center px-4">
-                      <Link href="/"><img src="/logo.png" alt="Rob and Molly"/></Link>
+                      <Link href="/">
+                        <Image src="/logo.png" alt="Rob and Molly" width="481px" height="364px"/>
+                      </Link>
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
@@ -126,7 +132,7 @@ export default function Layout({ children }) {
                     </nav>
                   </div>
                   <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-                    <a href="/our-story" className="group block flex-shrink-0">
+                    <Link href="/our-story" className="group block flex-shrink-0">
                       <div className="flex items-center">
                         <div>
                           <img
@@ -140,7 +146,7 @@ export default function Layout({ children }) {
                           <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">Read our story</p>
                         </div>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </Dialog.Panel>
               </Transition.Child>
@@ -155,7 +161,9 @@ export default function Layout({ children }) {
           <div className="flex flex-1 flex-col border border-gray-200 bg-white rounded-3xl align-middle">
             <div className="flex flex-1 flex-col overflow-y-auto pt-5 pb-4">
               <div className="flex flex-shrink-0 items-center px-4">
-                <Link href="/"><img src="/logo.png" className="p-2 cursor-pointer" alt="Rob and Molly"/></Link>
+                <Link href="/">
+                  <Image src="/logo.png" className="p-2 cursor-pointer" alt="Rob and Molly" width="481px" height="364px" />
+                </Link>
               </div>
               <nav className="mt-5 flex-1 space-y-1 bg-white px-2">
                 {navigation.map((item) => (

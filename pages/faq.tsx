@@ -4,6 +4,14 @@ import Image from 'next/image'
 
 const faqs = [
   {
+    question: 'What\'s with the soft RSVP?',
+    answer: 'Knowing many will be traveling from out of state to the wedding, hoping to get a realistic headcount to share with vendors as we continue to plan our big day throughout the year.'
+  },
+  {
+    question: 'Where should I stay and for how long?',
+    answer: 'We have a block of rooms at the Asbury Hotel, which is where the wedding will be held.  We have a block of rooms for Friday, Saturday, and Sunday nights.  If you are traveling from out of state, we recommend staying for the weekend.'
+  },
+  {
     question: 'What should I do if I cannot make it?',
     answer:
       'Please RSVP and let us know as soon as possible, so we are able to plan accordingly. We will miss having you there!',

@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="lg:w-0 lg:flex-1">
                 <h2 className="text-3xl font-bold tracking-tight text-white">Want to keep in touch?</h2>
                 <p className="mt-4 max-w-3xl text-lg text-indigo-100">
-                    Once or twice a month, we'll send you updates on our wedding planning progress! You can unsubscribe at any time.
+                    Once or twice a month, we&apos;ll send you updates on our wedding planning progress! You can unsubscribe at any time.
                 </p>
             </div>
             <div className="mt-12 sm:w-full sm:max-w-md lg:mt-0 lg:ml-8 lg:flex-1">

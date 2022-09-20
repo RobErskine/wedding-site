@@ -12,7 +12,7 @@ const ExploreTheShore: NextPage = () => {
   return (
     <div className="bg-white">
       <div aria-hidden="true" className="relative">
-        <img
+        <Image
           src="/beach.webp"
           alt=""
           className="h-96 w-full object-cover object-center"
