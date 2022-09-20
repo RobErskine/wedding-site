@@ -93,7 +93,7 @@ const Home: NextPage = () => {
               {/* <h2 className="text-lg font-semibold text-gray-500">We can&apos;t wait to celebrate with you on...</h2> */}
               <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023</em></p>
               <p className="mt-3 text-lg text-gray-700">
-                We can't wait to celebrate with you  
+                We can&apos;t wait to celebrate with you  
                 <Countdown 
                   date={'2023-08-23T15:30:00-04:00'} 
                   renderer={props => <span> in only {props?.days} days, {props?.hours} hours, {props?.minutes} minutes, and {props?.seconds} seconds!</span>}

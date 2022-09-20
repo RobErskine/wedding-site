@@ -86,13 +86,13 @@ const Accomodations: NextPage = () => {
                         </div>
                         <ul role="list" className="flex space-x-5">
                           <li>
-                            <a target="_blank" href={location.websiteUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" rel="noreferrer" href={location.websiteUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">Website for {location.name}</span>
                               <GlobeAltIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
                           </li>
                           <li>
-                            <a target="_blank" href={location.googleMapsUrl} className="text-gray-400 hover:text-gray-500">
+                            <a target="_blank" rel="noreferrer" href={location.googleMapsUrl} className="text-gray-400 hover:text-gray-500">
                               <span className="sr-only">Website for {location.name}</span>
                               <MapPinIcon className="h-5 w-5" aria-hidden="true" />
                             </a>
