@@ -78,7 +78,7 @@ const Home: NextPage = () => {
                     href="/rob-and-molly-wedding-invite.ics"
                     className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
                   >
-                    Save the date to your calender
+                    Save the date to your calendar
                     <CalendarDaysIcon className="-mr-1 ml-3 h-5 w-5 text-gray-700" aria-hidden="true" />
                   </a>
                 </div>
