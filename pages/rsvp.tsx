@@ -4,10 +4,17 @@ import Image from 'next/image'
 
 const RSVP: NextPage = () => {
   return (
-    <form className="max-w-xl mx-auto">
-      <h1 className="text-3xl font-bold">
+    <form className="max-w-xl mx-auto mt-20" name="soft-rsvp" data-netlify="true" method="POST" action="/soft-rsvp-thanks">
+      <input
+        type="hidden"
+        name="soft-rsvp"
+        value="contact"
+      />
+      <h1 className="text-3xl font-bold mb-4">
         Soft RSVP
       </h1>
+      <p className="mb-6 text-lg text-gray-500">Knowing many will be traveling from out of state to the wedding, hoping to get a realistic headcount to share with vendors as we continue to plan our big day throughout the year.</p>
+      <p className="mb-8 text-sm text-gray-700">All fields required</p>
       <div>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -33,18 +40,27 @@ const RSVP: NextPage = () => {
               name="email"
               id="email"
               className="block w-full p-4 border border-grey-500 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="you@example.com"
+              placeholder="phanatic@phillies.com"
             />
+          </div>
+        </div>
+        <div className="relative flex items-start mb-8">
+          <div className="flex h-5 items-center">
+            <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+          </div>
+          <div className="ml-3 text-sm">
+            <label htmlFor="comments" className="font-medium text-gray-700">Want email updates?</label>
+            <span id="comments-description" className="text-gray-500"><span className="sr-only">Email updates: </span> We&apos;ll send updates every once in awhile</span>
           </div>
         </div>
         <div className="mb-4">
           <label htmlFor="location" className="block text-sm font-medium text-gray-700">
-            Are you able to attend?
+            Are you planning to attend on 10/23/2023?
           </label>
           <select
             id="location"
             name="location"
-            className="mt-1 block p-4 py-5 border border-grey-500 w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            className="mt-1 block p-4 py-6 border border-grey-500 w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
             defaultValue="Yes! I'll be there"
           >
             <option>Yes! I&apos;ll be there</option>

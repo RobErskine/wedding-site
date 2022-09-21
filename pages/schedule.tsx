@@ -41,8 +41,11 @@ const Schedule: NextPage = () => {
 
   return (
     <div className="bg-white">
-      <div className="mx-auto max-w-2xl py-24 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
+      <div className="mx-auto max-w-2xl py-12 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
+            <span className="block xl:inline mb-8">Schedule</span>
+          </h1>
           <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-4xl">Sunday, August 20th, 2023</h2>
           <p className="mt-4 text-gray-500">
             Please join us in celebrating our wedding!

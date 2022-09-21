@@ -119,8 +119,9 @@ const Accomodations: NextPage = () => {
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">There are a range of short-term vacation rentals and boutique inns in the area that may also be of interest to you.</p>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">We recommend opening your search to the following towns: Asbury Park, Ocean Grove, Bradley Beach, Belmar, Avon by the Sea, Sea Girt, Manasquan and Long Branch.</p>
+            <hr/>
+            <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">We've put together <a href="https://www.airbnb.com/wishlists/v/1164654977" className="text-blue-700 hover:text-blue-900 hover:underline">a list of AirBnB</a> rentals in the area that would be good for both small and large groups looking to stay for a long weekend.</p>
           </div>
-          <iframe src="https://www.airbnb.com/wishlists/v/1164654977" className="w-full h-full"></iframe>
         </div>
       </div>
     </div>

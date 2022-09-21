@@ -131,7 +131,7 @@ export default function Layout({ children }: Props) {
                       ))}
                     </nav>
                   </div>
-                  <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
+                  {/* <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
                     <Link href="/our-story" className="group block flex-shrink-0">
                       <div className="flex items-center">
                         <div>
@@ -147,7 +147,7 @@ export default function Layout({ children }: Props) {
                         </div>
                       </div>
                     </Link>
-                  </div>
+                  </div> */}
                 </Dialog.Panel>
               </Transition.Child>
               <div className="w-14 flex-shrink-0">{/* Force sidebar to shrink to fit close icon */}</div>
@@ -188,7 +188,7 @@ export default function Layout({ children }: Props) {
                 ))}
               </nav>
             </div>
-            <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
+            {/* <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
               <Link href="/our-story" className="group block w-full flex-shrink-0 cursor-pointer">
                 <div className="flex items-center cursor-pointer">
                   <div>
@@ -204,7 +204,7 @@ export default function Layout({ children }: Props) {
                   </div>
                 </div>
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
         <div className="flex flex-1 flex-col md:pl-64">
