@@ -7,8 +7,8 @@ const RSVP: NextPage = () => {
     <form className="max-w-xl mx-auto mt-20" name="soft-rsvp" data-netlify="true" method="POST" action="/soft-rsvp-thanks">
       <input
         type="hidden"
-        name="soft-rsvp"
-        value="contact"
+        name="form-name"
+        value="soft-rsvp"
       />
       <h1 className="text-3xl font-bold mb-4">
         Soft RSVP
