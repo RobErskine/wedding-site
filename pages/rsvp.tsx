@@ -54,12 +54,12 @@ const RSVP: NextPage = () => {
           </div>
         </div>
         <div className="mb-4">
-          <label htmlFor="location" className="block text-sm font-medium text-gray-700">
+          <label htmlFor="canAttend" className="block text-sm font-medium text-gray-700">
             Are you planning to attend on 10/23/2023?
           </label>
           <select
-            id="location"
-            name="location"
+            id="canAttend"
+            name="canAttend"
             className="mt-1 block p-4 py-6 border border-grey-500 w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
             defaultValue="Yes! I'll be there"
           >
