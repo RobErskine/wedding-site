@@ -46,11 +46,11 @@ const RSVP: NextPage = () => {
         </div>
         <div className="relative flex items-start mb-8">
           <div className="flex h-5 items-center">
-            <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
+            <input id="subscribe" aria-describedby="subscribe-description" name="subscribe" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
           </div>
           <div className="ml-3 text-sm">
-            <label htmlFor="comments" className="font-medium text-gray-700">Want email updates?</label>
-            <span id="comments-description" className="text-gray-500"><span className="sr-only">Email updates: </span> We&apos;ll send updates every once in awhile</span>
+            <label htmlFor="subscribe" className="font-medium text-gray-700">Want email updates?</label>
+            <span id="subscribe-description" className="text-gray-500"><span className="sr-only">Email updates: </span> We&apos;ll send updates every once in awhile</span>
           </div>
         </div>
         <div className="mb-4">
