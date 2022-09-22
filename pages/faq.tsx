@@ -26,7 +26,7 @@ const faqs = [
   },
   {
     question: 'What if I have dietary restrictions or allergies?',
-    answer: 'All guests will have a choice of their preferred meal the day of the event. Please let the server or wait staff know of any allergies or restrictions so they can accommodate.'
+    answer: 'All guests will have a choice of their preferred meal for the day of the event. Please let the server or wait staff know of any allergies or restrictions so they can accommodate.'
   },
   {
     question: 'Can I bring a plus one?',

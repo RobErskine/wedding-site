@@ -26,7 +26,7 @@ const planes = [
 
 const trains = [
   {
-    name: 'New Jersey transit',
+    name: 'New Jersey Transit',
     description: "New Jersey Transit goes from New York Penn Station and Newark Penn via the Jersey Coast Line to Asbury Park. It's a local train and makes every stop, so it will take 2 hours from NY Penn Station."
   },
   {

@@ -1,12 +1,154 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import { Disclosure } from '@headlessui/react'
 
-const explore = [
-  {
-    
-  }
-]
+const explores = {
+    explore: {
+      beaches: [
+        {
+          name: 'Asbury Park',
+          description: 'Weekday $6, Weekend $9',
+          link: '',
+          image: ''
+        },
+        {
+          name: 'Manasquan',
+          description: 'Daily badge $10',
+          link: '',
+          image: ''
+        },
+        {
+          name: 'Belmar',
+          description: 'Daily badge $9',
+          link: '',
+          image: ''
+        },
+        {
+          name: 'Spring Lake',
+          description: 'Daily badge $20',
+          link: '',
+          image: ''
+        }
+      ],
+      activities: [
+        {
+          name: 'Silverball Pinball Museum',
+          description: '',
+          link: 'https://www.silverballmuseum.com/asbury-park/',
+          image: ''
+        },
+        {
+          name: 'Asbury Park Pedal Boats',
+          description: '',
+          link: 'https://www.asburyparkpedalboats.com/',
+          image: ''
+        },
+        {
+          name: 'Shipwreck Island Mini Golf',
+          description: '',
+          link: 'https://bradleybeachminigolf.com/',
+          image: ''
+        },
+        {
+          name: 'Belmar Parasail',
+          description: '',
+          link: 'https://www.belmarparasail.com/',
+          image: ''
+        },
+        {
+          name: 'Jenkinson\'s Boardwalk',
+          description: '',
+          link: 'https://jenkinsons.com/',
+          image: ''
+        },
+        {
+          name: 'Hot Sand Glass Blowing',
+          description: '',
+          link: 'http://www.hotsandap.com/',
+          image: ''
+        },
+        {
+          name: 'Asbury Lanes',
+          description: 'This iconic bowling alley is actually somehow attached to our wedding venue. Show up early to the wedding for 50% off bowling! (disclaimer: this is not a real deal)',
+          link: 'https://www.asburylanes.com/',
+          image: ''
+        },
+        {
+          name: 'The Stone Pony',
+          description: 'Rob and Molly have seen a few shows here, most recently Modest Mouse, one of Rob\'s childhood favorites. Ask Molly\'s brother how the show was!',
+          link: 'https://www.stoneponyonline.com/',
+          image: ''
+        },
+        
+      ]
+    },
+    eat: {
+      drinks: [
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+
+        {
+          name: '',
+          description: '',
+          link: '',
+          image: ''
+        },
+      ]
+    }
+}
 
 const ExploreTheShore: NextPage = () => {
   return (
@@ -24,10 +166,34 @@ const ExploreTheShore: NextPage = () => {
         <div className="mx-auto max-w-2xl text-center lg:max-w-4xl">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Explore the Shore</h2>
           <p className="mt-4 text-gray-500">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            There are so many fun things to do down by the Jersey shore. Here are a few of our select favorites if you (and we encourage it!) make a long weekend out of our wedding weekend.
           </p>
         </div>
-        <iframe src="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2sVuOeA579SfuPhSDP1TaDWw!3e3?shorturl=1"></iframe>
+        
+        <dl className="mt-6 space-y-6 divide-y divide-gray-200">
+          {explores.explore.map((item) => (
+            <Disclosure as="div" key={faq.question} className="pt-6">
+              {({ open }) => (
+                <>
+                  <dt className="text-lg">
+                    <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
+                      <span className="font-medium text-gray-900">{faq.question}</span>
+                      <span className="ml-6 flex h-7 items-center">
+                        <ChevronDownIcon
+                          className={classNames(open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform')}
+                          aria-hidden="true"
+                        />
+                      </span>
+                    </Disclosure.Button>
+                  </dt>
+                  <Disclosure.Panel as="dd" className="mt-2 pr-12">
+                    <p className="text-base text-gray-500">{faq.answer}</p>
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          ))}
+        </dl>
       </div>
     </div>
   )
