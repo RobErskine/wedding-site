@@ -3,6 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Disclosure } from '@headlessui/react'
 
+import { 
+  ChevronDownIcon
+} from '@heroicons/react/20/solid'
+
+function classNames(...classes: string[]) {
+  return classes.filter(Boolean).join(' ')
+}
+
 const explores = {
     explore: {
       beaches: [
@@ -171,7 +179,7 @@ const ExploreTheShore: NextPage = () => {
         </div>
         
         <dl className="mt-6 space-y-6 divide-y divide-gray-200">
-          {explores.explore.map((item) => (
+          {explores.explore.beaches.map((beach) => (
             <Disclosure as="div" key={faq.question} className="pt-6">
               {({ open }) => (
                 <>
