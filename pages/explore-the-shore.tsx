@@ -198,10 +198,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.beaches.map((beach) => (
-                    <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{beach?.name}</span>
-                      <span className="text-xl text-gray-400">{beach?.description}</span>
+                  {explores.explore.beaches.map((item) => (
+                    <div className="flex flex-col  pb-4" key={item.name}>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -229,10 +229,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
-                    <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                  {explores.explore.activities.map((item) => (
+                    <div className="flex flex-col  pb-4" key={item.name}>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -261,10 +261,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
+                  {explores.explore.activities.map((item) => (
                     <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -292,10 +292,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
-                    <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                  {explores.explore.activities.map((item) => (
+                    <div className="flex flex-col  pb-4" key="">
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -312,7 +312,7 @@ const ExploreTheShore: NextPage = () => {
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
                       <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Dinner</span>
-                      <p className="block w-full text-xl">Whether you are looking for a dive or a 5-star meal, we got ya covered.</p>
+                      <p className="block w-full text-xl">Whether you are looking for a dive or a 5-star meal, we got ya covered</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
                       <ChevronDownIcon
@@ -323,10 +323,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
+                  {explores.explore.activities.map((item) => (
                     <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -354,10 +354,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
+                  {explores.explore.activities.map((item) => (
                     <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -385,10 +385,10 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((activity) => (
+                  {explores.explore.activities.map((item) => (
                     <div className="flex flex-col  pb-4">
-                      <span className="text-2xl">{activity?.name}</span>
-                      <span className="text-xl text-gray-400">{activity?.description}</span>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
                   ))}
                 </Disclosure.Panel>
