@@ -262,7 +262,7 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.activities.map((item) => (
-                    <div className="flex flex-col  pb-4">
+                    <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
@@ -293,7 +293,7 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.activities.map((item) => (
-                    <div className="flex flex-col  pb-4" key="">
+                    <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
@@ -324,7 +324,7 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.activities.map((item) => (
-                    <div className="flex flex-col  pb-4">
+                    <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
@@ -355,7 +355,7 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.activities.map((item) => (
-                    <div className="flex flex-col  pb-4">
+                    <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
@@ -386,7 +386,7 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.activities.map((item) => (
-                    <div className="flex flex-col  pb-4">
+                    <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
