@@ -94,68 +94,108 @@ const explores = {
     eat: {
       drinks: [
         {
-          name: '',
+          name: 'Watermark',
+          description: '',
+          link: 'https://watermarkap.com/',
+          image: ''
+        },
+        {
+          name: 'Asbury Park Distilling',
+          description: '',
+          link: 'https://apdistilling.com/',
+          image: ''
+        },
+        {
+          name: 'Asbury Festhalle & Biergarten',
+          description: '',
+          link: 'https://www.asburybiergarten.com/',
+          image: ''
+        },
+        {
+          name: 'Wonder Bar',
+          description: '',
+          link: 'https://wonderbarasburypark.com/',
+          image: ''
+        },
+        {
+          name: 'Bond Street Bar',
+          description: '',
+          link: 'https://bondstreetap.com/',
+          image: ''
+        },
+        {
+          name: 'Johnny Macs',
+          description: '',
+          link: 'https://www.johnnymacbar.com/',
+          image: ''
+        },
+        {
+          name: 'Leggetts Sand Bar',
+          description: 'Molly used to work here!',
+          link: '',
+          image: ''
+        },
+        {
+          name: 'Parker House',
           description: '',
           link: '',
           image: ''
         },
         {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
-          description: '',
-          link: '',
-          image: ''
-        },
-        {
-          name: '',
+          name: 'Reef & Barrel',
           description: '',
           link: '',
           image: ''
         },
 
         {
-          name: '',
+          name: 'Joe\'s Surf Shack',
           description: '',
           link: '',
           image: ''
         },
       ]
     }
+}
+
+function CardName(name: string, dest: string){
+  if(dest){
+    return (
+      <a href={dest} target="_blank">
+        <p className="text-lg font-bold mt-2">{name}</p>
+      </a>
+    )
+  } else {
+    return (
+      <p className="text-lg font-bold mt-2">{name}</p>
+    )
+  }
+}
+
+function CardDesc(description: string){
+  if(description){
+    return (
+      <p className="text-gray-500 text-center mt-2">{description}</p>
+    )
+  }
+}
+
+function CardImage(image: string, alt: string){
+  if(image){
+    return (
+      <img src={image} alt={alt} className="max-w-2xl mb-2 block" />
+    )
+  }
+}
+
+function CardContent (name: string, image: string, description: string, dest: string) {
+  return (
+    <div className="flex flex-col justify-left items-center">
+      <CardImage image={image} alt={name} />
+      <CardName name={name} dest={dest} />
+      <CardDesc description={description} />
+    </div>
+  )
 }
 
 const ExploreTheShore: NextPage = () => {
@@ -178,7 +218,7 @@ const ExploreTheShore: NextPage = () => {
           </p>
         </div>
         
-        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto">Explore</h2>
+        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto pl-4">Explore</h2>
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
           <Disclosure as="div" className="" key="explore">
             {({ open }) => (
@@ -186,7 +226,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Beaches</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Beaches</span>
                       <p className="block w-full text-xl">Here are some of our favorite beaches on the Jersey Shore</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
@@ -199,9 +239,15 @@ const ExploreTheShore: NextPage = () => {
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.beaches.map((item) => (
-                    <div className="flex flex-col  pb-4" key={item.name}>
-                      <span className="text-2xl">{item?.name}</span>
-                      <span className="text-xl text-gray-400">{item?.description}</span>
+                    // <div className="flex flex-col  pb-4" key={item.name}>
+                    //   <span className="text-2xl">{item?.name}</span>
+                    //   <span className="text-xl text-gray-400">{item?.description}</span>
+                    // </div>
+                    // <CardContent name={item.name} image={item.image} description={item.description} dest={item.link} />
+                    <div className="flex flex-col justify-left items-center">
+                      <CardImage image={item.image} alt={item.name} />
+                      <CardName name={item.name} dest={item.link} />
+                      <CardDesc description={item.description} />
                     </div>
                   ))}
                 </Disclosure.Panel>
@@ -217,7 +263,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Activites</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Activites</span>
                       <p className="block w-full text-xl">Here are some of our favorite spots near the Wedding Venue</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
@@ -241,7 +287,7 @@ const ExploreTheShore: NextPage = () => {
           </Disclosure>
         </dl>
 
-        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto">EAT</h2>
+        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto">Food <em className="font-black mr-1">&amp;</em> Drink</h2>
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
           <Disclosure as="div" className="" key="explore">
             {({ open }) => (
@@ -249,7 +295,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Breakfast</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Breakfast</span>
                       <p className="block w-full text-xl">Here&apos;s a short list of our favorite breakfast and brunch spots</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
@@ -280,7 +326,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Lunch</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Lunch</span>
                       <p className="block w-full text-xl">Sammies and other easy bites can be found in here</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
@@ -311,7 +357,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Dinner</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Dinner</span>
                       <p className="block w-full text-xl">Whether you are looking for a dive or a 5-star meal, we got ya covered</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
@@ -342,8 +388,8 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">Dessert</span>
-                      <p className="block w-full text-xl">Mmm... chocolate.</p>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">Dessert</span>
+                      <p className="block w-full text-xl">Mmm... ice cream</p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">
                       <ChevronDownIcon
@@ -373,7 +419,7 @@ const ExploreTheShore: NextPage = () => {
                 <dt className="text-lg">
                   <Disclosure.Button className="flex w-full items-start justify-between text-left text-gray-400">
                     <div>
-                      <span className="block w-full font-medium text-gray-900 text-2xl font-bold">DRANKS</span>
+                      <span className="block w-full font-medium text-blue-500 text-2xl font-bold">DRANKS</span>
                       <p className="block w-full text-xl">Molly wouldn&apos;t let me put this one first :( </p>
                     </div>
                     <span className="ml-6 flex h-7 items-center mt-4">

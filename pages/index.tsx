@@ -37,24 +37,24 @@ import {
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="relative mt-8">
+      <div className="relative mt-8 z-50">
         <div className="absolute inset-x-8 bottom-0 h-1/2 bg-gray-100 rounded-3xl" />
-          <div className="mx-auto max-w-9xl sm:px-6 lg:px-8">
-            <div className="relative shadow-xl sm:overflow-hidden sm:rounded-3xl">
+          <div className="mx-auto max-w-9xl sm:px-6 lg:px-8 drop-shadow-lg">
+            <div className="relative shadow-md hover:shadow-2xl sm:overflow-hidden rounded-3xl transform transform-gpu hover:scale-110 transition-300 ease-in-out duration-300 top-0 hover:top-4">
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
                   src="/homepage/homepage.png"
                   alt="People working on laptops"
                 />
-                <div className="absolute inset-0 bg-blue-400 mix-blend-multiply" />
+                <div className="absolute inset-0 bg-blue-200 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
-                  <span className="block text-white">Rob &amp; Molly are</span>
-                  <span className="block text-orange-300 mb-24"><em>getting married!</em></span>
+                <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg">
+                  <span className="block text-white">Rob <em className="mr-3 text-7xl relative top-2">&amp;</em> Molly are</span>
+                  <span className="block text-pink-300 mb-36"><em>getting married!</em></span>
                 </h1>
-                <p className="mx-auto mt-6 max-w-lg text-center text-xl text-white sm:max-w-3xl">
+                <p className="mx-auto block mt-24 max-w-lg text-center text-xl text-white sm:max-w-3xl drop-shadow-lg">
                   We hope you can join us on August 20th, 2023 in Asbury Park, NJ.
                 </p>
                 <div className="mx-auto mt-10 max-w-sm sm:flex sm:max-w-none sm:justify-center">
@@ -80,12 +80,14 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        {/* <div className="relative bg-gray-100 lg:mx-8 rounded-3xl mt-8 overflow-hidden">
+        <div className="relative bg-gray-100 rounded-2xl mt-8 overflow-hidden max-w-5xl mx-auto px-0">
           <Carousel 
-            className="max-w-3xl rounded-lg"
+            className="w-full rounded-lg mx-auto block"
             showThumbs={false}
             showStatus={false}
-            autoPlay={false}
+            autoPlay={true}
+            centerMode={true}
+            centerSlidePercentage={50}
             infiniteLoop={true}
           >
             {homepageImages.map((image) => (
@@ -94,60 +96,6 @@ const Home: NextPage = () => {
               </div>
             ))}
           </Carousel>
-          <div className="relative mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
-            <div className="md:ml-auto md:w-1/2 md:pl-10">
-              <h3>wow</h3>
-            </div>
-          </div>
-        </div> */}
-
-        <div className="relative bg-gray-100 lg:mx-8 rounded-3xl mt-8">
-          <div className="relative max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16 lg:w-1/2">
-            <div className="md:ml-auto md:pl-10">
-              {/* <h2 className="text-lg font-semibold text-gray-500">We can&apos;t wait to celebrate with you on...</h2> */}
-              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023</em></p>
-              <p className="mt-3 text-lg text-gray-700">
-                We can&apos;t wait to celebrate with you  
-                <Countdown 
-                  date={'2023-08-23T15:30:00-04:00'} 
-                  renderer={props => <span> in only {props?.days} days, {props?.hours} hours, {props?.minutes} minutes, and {props?.seconds} seconds!</span>}
-                >
-                  <span> today!</span>
-                </Countdown>
-              </p>
-              <div className="mt-8">
-                <div className="inline-flex rounded-md shadow">
-                  <a
-                    download
-                    href="/rob-and-molly-wedding-invite.ics"
-                    className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-gray-900 hover:bg-gray-50"
-                  >
-                    Save the date to your calendar
-                    <CalendarDaysIcon className="-mr-1 ml-3 h-5 w-5 text-gray-700" aria-hidden="true" />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="relative mr-0 lg:w-1/2">
-            <div className="md:ml-auto">
-              <div className="mt-8">
-                <Carousel 
-                  className="w-full rounded-lg"
-                  showThumbs={false}
-                  showStatus={false}
-                  autoPlay={false}
-                  infiniteLoop={true}
-                >
-                  {homepageImages.map((image) => (
-                    <div key={image.src}>
-                      <img src={image.src} alt="" />
-                    </div>
-                  ))}
-                </Carousel>
-              </div>
-            </div>
-          </div>
         </div>
 
         <div className="relative bg-gray-100 lg:mx-8 rounded-3xl mt-8">
@@ -157,12 +105,12 @@ const Home: NextPage = () => {
               src="/homepage/closeup.png"
               alt=""
             />
-            <div className="absolute inset-0 bg-blue-400 mix-blend-multiply rounded-3xl" />
+            <div className="absolute inset-0 bg-pink-100 mix-blend-multiply rounded-3xl" />
           </div>
           <div className="relative mx-auto max-w-5xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
             <div className="md:ml-auto md:w-1/2 md:pl-10">
               {/* <h2 className="text-lg font-semibold text-gray-500">We can&apos;t wait to celebrate with you on...</h2> */}
-              <p className="mt-2 text-4xl font-bold tracking-tight text-orange-300 sm:text-3xl"><em>Sunday, August 20th, 2023</em></p>
+              <p className="mt-2 text-4xl font-bold tracking-tight text-blue-500 sm:text-3xl"><em>Sunday, August 20th, 2023</em></p>
               <p className="mt-3 text-lg text-gray-700">
                 We can&apos;t wait to celebrate with you  
                 <Countdown 
