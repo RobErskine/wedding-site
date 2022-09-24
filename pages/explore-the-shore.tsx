@@ -188,15 +188,15 @@ function CardImage(image: string, alt: string){
   }
 }
 
-function CardContent (name: string, image: string, description: string, dest: string) {
-  return (
-    <div className="flex flex-col justify-left items-center">
-      <CardImage image={image} alt={name} />
-      <CardName name={name} dest={dest} />
-      <CardDesc description={description} />
-    </div>
-  )
-}
+// function CardContent (name: string, image: string, description: string, dest: string) {
+//   return (
+//     <div className="flex flex-col justify-left items-center">
+//       <CardImage image={image} alt={name} />
+//       <CardName name={name} dest={dest} />
+//       <CardDesc description={description} />
+//     </div>
+//   )
+// }
 
 const ExploreTheShore: NextPage = () => {
   return (
