@@ -243,12 +243,6 @@ const ExploreTheShore: NextPage = () => {
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
                     </div>
-                    // <CardContent name={item.name} image={item.image} description={item.description} dest={item.link} />
-                    // <div className="flex flex-col justify-left items-center" key={item.name}>
-                    //   <CardImage image={item.image} alt={item.name} />
-                    //   <CardName name={item.name} dest={item.link} />
-                    //   <CardDesc description={item.description} />
-                    // </div>
                   ))}
                 </Disclosure.Panel>
               </>
