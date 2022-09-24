@@ -237,12 +237,12 @@ const ExploreTheShore: NextPage = () => {
                     </span>
                   </Disclosure.Button>
                 </dt>
-                <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
+                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
                   {explores.explore.beaches.map((item) => (
-                    // <div className="flex flex-col  pb-4" key={item.name}>
-                    //   <span className="text-2xl">{item?.name}</span>
-                    //   <span className="text-xl text-gray-400">{item?.description}</span>
-                    // </div>
+                    <div className="flex flex-col  pb-4" key={item.name}>
+                      <span className="text-2xl">{item?.name}</span>
+                      <span className="text-xl text-gray-400">{item?.description}</span>
+                    </div>
                     // <CardContent name={item.name} image={item.image} description={item.description} dest={item.link} />
                     // <div className="flex flex-col justify-left items-center" key={item.name}>
                     //   <CardImage image={item.image} alt={item.name} />
