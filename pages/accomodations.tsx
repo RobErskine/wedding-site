@@ -49,6 +49,25 @@ const locations = [
   }
 ]
 
+const nearbyLocations = [
+  {
+    name: 'Homewood Suites by Hilton Eatontown',
+    role: '(13 min drive to venue)',
+    imageUrl: '/accomodations/homewood.webp',
+    bio: '',
+    websiteUrl: 'https://www.marriott.com/en-us/hotels/ewres-sheraton-eatontown-hotel/overview/',
+    googlesMapsUrls: 'https://www.google.com/maps/dir//Homewood+Suites+by+Hilton+Eatontown,+4+Industrial+Way+E,+Eatontown,+NJ+07724/@40.276363,-74.0445389,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c22f6f8c98e1dd:0x3a8b657fd73b7b5d!2m2!1d-74.0423502!2d40.276363!3e0'
+  },
+  {
+    name: 'Sheraton Eatontown Hotel',
+    role: '(13 min drive to venue)',
+    imageUrl: '/accomodations/sheraton.webp',
+    bio: '',
+    websiteUrl: 'https://www.hilton.com/en/hotels/ewrethw-homewood-suites-eatontown/',
+    googlesMapsUrls: 'https://www.google.com/maps/place/Sheraton+Eatontown+Hotel/@40.275599,-74.0454062,17z/data=!3m1!4b1!4m8!3m7!1s0x89c22f6fbb477935:0xa5c2a8613005e393!5m2!4m1!1i2!8m2!3d40.275599!4d-74.0432175'
+  }
+]
+
 const Accomodations: NextPage = () => {
   return (
     <div className="bg-white">
@@ -107,6 +126,58 @@ const Accomodations: NextPage = () => {
           </div>
         </div>
       </div>
+
+      <div className="bg-white">
+        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6">
+          <div className="space-y-12 lg:grid lg:grid-cols-3 lg:gap-8 lg:space-y-0">
+            <div className="space-y-5 sm:space-y-4">
+            </div>
+            <div className="lg:col-span-2">
+              <h2 className="text-2xl font-bold mb-8">Hotels Nearby</h2>
+              <ul
+                role="list"
+                className="space-y-12 sm:-mt-8 sm:space-y-0 sm:divide-y sm:divide-gray-200 lg:gap-x-8 lg:space-y-0"
+              >
+                {nearbyLocations.map((location) => (
+                  <li key={location.name} className="sm:py-8">
+                    <div className="space-y-4 sm:grid sm:grid-cols-3 sm:items-start sm:gap-6 sm:space-y-0">
+                      <div className="aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
+                        <img className="rounded-lg object-cover shadow-lg" src={location.imageUrl} alt="" />
+                      </div>
+                      <div className="sm:col-span-2">
+                        <div className="space-y-4">
+                          <div className="space-y-1 text-lg font-medium leading-6">
+                            <h3>{location.name}</h3>
+                            <p className="text-blue-600 text-sm">{location.role}</p>
+                          </div>
+                          <div className="text-lg">
+                            <p className="text-gray-500">{location.bio}</p>
+                          </div>
+                          <ul role="list" className="flex space-x-5">
+                            <li>
+                              <a target="_blank" rel="noreferrer" href={location.websiteUrl} className="text-gray-400 hover:text-gray-500">
+                                <span className="sr-only">Website for {location.name}</span>
+                                <GlobeAltIcon className="h-5 w-5" aria-hidden="true" />
+                              </a>
+                            </li>
+                            <li>
+                              <a target="_blank" rel="noreferrer" href={location.googleMapsUrl} className="text-gray-400 hover:text-gray-500">
+                                <span className="sr-only">Website for {location.name}</span>
+                                <MapPinIcon className="h-5 w-5" aria-hidden="true" />
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -119,7 +190,7 @@ const Accomodations: NextPage = () => {
             </p>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">There are a range of short-term vacation rentals and boutique inns in the area that may also be of interest to you.</p>
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">We recommend opening your search to the following towns: Asbury Park, Ocean Grove, Bradley Beach, Belmar, Avon by the Sea, Sea Girt, Manasquan and Long Branch.</p>
-            <hr/>
+            <hr className="mt-6 block max-w-xl mx-auto" />
             <p className="mx-auto mt-5 max-w-2xl text-xl text-gray-500">We&apos;ve put together <a href="https://www.airbnb.com/wishlists/v/1164654977" className="text-blue-700 hover:text-blue-900 hover:underline">a list of AirBnB</a> rentals in the area that would be good for both small and large groups looking to stay for a long weekend.</p>
           </div>
         </div>
