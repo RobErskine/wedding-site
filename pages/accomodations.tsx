@@ -56,7 +56,7 @@ const nearbyLocations = [
     imageUrl: '/accomodations/homewood.webp',
     bio: '',
     websiteUrl: 'https://www.marriott.com/en-us/hotels/ewres-sheraton-eatontown-hotel/overview/',
-    googlesMapsUrls: 'https://www.google.com/maps/dir//Homewood+Suites+by+Hilton+Eatontown,+4+Industrial+Way+E,+Eatontown,+NJ+07724/@40.276363,-74.0445389,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c22f6f8c98e1dd:0x3a8b657fd73b7b5d!2m2!1d-74.0423502!2d40.276363!3e0'
+    googleMapsUrl: 'https://www.google.com/maps/dir//Homewood+Suites+by+Hilton+Eatontown,+4+Industrial+Way+E,+Eatontown,+NJ+07724/@40.276363,-74.0445389,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c22f6f8c98e1dd:0x3a8b657fd73b7b5d!2m2!1d-74.0423502!2d40.276363!3e0'
   },
   {
     name: 'Sheraton Eatontown Hotel',
@@ -64,7 +64,7 @@ const nearbyLocations = [
     imageUrl: '/accomodations/sheraton.webp',
     bio: '',
     websiteUrl: 'https://www.hilton.com/en/hotels/ewrethw-homewood-suites-eatontown/',
-    googlesMapsUrls: 'https://www.google.com/maps/place/Sheraton+Eatontown+Hotel/@40.275599,-74.0454062,17z/data=!3m1!4b1!4m8!3m7!1s0x89c22f6fbb477935:0xa5c2a8613005e393!5m2!4m1!1i2!8m2!3d40.275599!4d-74.0432175'
+    googleMapsUrl: 'https://www.google.com/maps/place/Sheraton+Eatontown+Hotel/@40.275599,-74.0454062,17z/data=!3m1!4b1!4m8!3m7!1s0x89c22f6fbb477935:0xa5c2a8613005e393!5m2!4m1!1i2!8m2!3d40.275599!4d-74.0432175'
   }
 ]
 
