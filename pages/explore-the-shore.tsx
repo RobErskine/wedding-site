@@ -17,7 +17,7 @@ const explores = {
         {
           name: 'Asbury Park',
           description: 'Weekday $6, Weekend $9',
-          link: '',
+          link: 'https://www.cityofasburypark.com/185/Asbury-Park-Beaches',
           image: ''
         },
         {
@@ -92,6 +92,110 @@ const explores = {
       ]
     },
     eat: {
+      breakfast: [
+        {
+          name: 'Cardinal Provisions',
+          description: 'Also our wedding caterer!',
+          link: 'https://www.crdnal.com/',
+          image:''
+        },
+        {
+          name: 'Mariners Cove',
+          description: '',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Max Devros',
+          description: '',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Ray\'s Cafe',
+          description: '',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Committed Pig',
+          description: '',
+          link: '',
+          image:''
+        },
+      ],
+      lunch: [
+        {
+          name: 'Surf Taco',
+          description: 'Molly\'s first job was at the shop in Manasquan!',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Joe Leones',
+          description: '',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Jersey Mikes',
+          description: 'Check out the first Jersey Mikes ever in Point Pleasant!',
+          link: '',
+          image: ''
+        }
+      ],
+      dinner: [
+        {
+          name: 'Porta',
+          description: '',
+          link: 'https://pizzaporta.com/asbury-park',
+          image:''
+        },
+        {
+          name: 'Taka',
+          description: '',
+          link: '',
+          image:''
+        },
+        {
+          name: 'Lubranos Trattoria',
+          description: 'A classical McCann favorite.',
+          link: '',
+          image:''
+        },
+        {
+          name: 'St. Stephens Green Publick House',
+          description: '',
+          link: '',
+          image:''
+        }
+      ],
+      dessert: [
+        {
+          name: 'Strollos',
+          description: '',
+          link: 'https://strolloslighthouse.com/',
+          image:''
+        },
+        {
+          name: 'Sundaes',
+          description: '',
+          link: 'https://www.sundaesicecreamplace.com/',
+          image:''
+        },
+        {
+          name: 'Hoffmans',
+          description: '',
+          link: 'http://hoffmansicecream.net/',
+          image:''
+        },
+        {
+          name: 'Surfside',
+          description: '',
+          link: 'http://www.surfsidefrozencustard.com/welcome',
+          image:''
+        },
+      ],
       drinks: [
         {
           name: 'Watermark',
@@ -158,16 +262,22 @@ const explores = {
     }
 }
 
-function CardName(name: string, dest: string){
-  if(dest){
+const CardName = (name: string) => {
+  // if(dest.length > 0){
+  //   return (
+  //     <a href={dest} target="_blank" rel="noreferrer">
+  //       <p className="text-lg font-bold mt-2">{name}</p>
+  //     </a>
+  //   )
+  // } else {
+  //   return (
+  //     <p className="text-lg font-bold mt-2">{name}</p>
+  //   )
+  // }
+
+  if(name){
     return (
-      <a href={dest} target="_blank" rel="noreferrer">
-        <p className="text-lg font-bold mt-2">{name}</p>
-      </a>
-    )
-  } else {
-    return (
-      <p className="text-lg font-bold mt-2">{name}</p>
+      <p className="text-lg font-bold mt-2">{name}</p> 
     )
   }
 }
@@ -216,11 +326,12 @@ const ExploreTheShore: NextPage = () => {
           <p className="mt-4 text-gray-500">
             There are so many fun things to do down by the Jersey shore. Here are a few of our select favorites if you (and we encourage it!) make a long weekend out of our wedding weekend.
           </p>
+          <p className="mt-4 text-gray-500"><a className="text-blue-500 underline" href="https://www.google.com/maps/@/data=!3m1!4b1!4m3!11m2!2sVuOeA579SfuPhSDP1TaDWw!3e3?shorturl=1" target="_blank" rel="noreferrer">Check out all of our favorites on an interactive Google Map</a>.</p>
         </div>
         
         <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto pl-4">Explore</h2>
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="beaches">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -238,12 +349,14 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                  <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.beaches.map((item) => (
-                    <div className="flex flex-col  pb-4" key={item.name}>
-                      <span className="text-2xl">{item?.name}</span>
-                      <span className="text-xl text-gray-400">{item?.description}</span>
-                    </div>
-                  ))}
+                  {explores.explore.beaches.map((item) => {
+                    return (
+                      <div className="flex flex-col  pb-4" key={item.name}>
+                        <span className="text-2xl">{item?.name}</span>
+                        <span className="text-xl text-gray-400">{item?.description}</span>
+                      </div>
+                    )
+                  })}
                 </Disclosure.Panel>
               </>
             )}
@@ -251,7 +364,7 @@ const ExploreTheShore: NextPage = () => {
         </dl>
 
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="activities">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -283,7 +396,7 @@ const ExploreTheShore: NextPage = () => {
 
         <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto">Food <em className="font-black mr-1">&amp;</em> Drink</h2>
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="breakfast">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -301,7 +414,7 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((item) => (
+                  {explores.eat.breakfast.map((item) => (
                     <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
@@ -314,7 +427,7 @@ const ExploreTheShore: NextPage = () => {
         </dl>
 
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="lunch">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -332,7 +445,7 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((item) => (
+                  {explores.eat.lunch.map((item) => (
                     <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
@@ -345,7 +458,7 @@ const ExploreTheShore: NextPage = () => {
         </dl>
 
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="dinner">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -363,7 +476,7 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((item) => (
+                  {explores.eat.dinner.map((item) => (
                     <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
@@ -376,7 +489,7 @@ const ExploreTheShore: NextPage = () => {
         </dl>
 
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="dessert">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -394,7 +507,7 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((item) => (
+                  {explores.eat.dessert.map((item) => (
                     <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
@@ -407,7 +520,7 @@ const ExploreTheShore: NextPage = () => {
         </dl>
 
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
-          <Disclosure as="div" className="" key="explore">
+          <Disclosure as="div" className="" key="dranks">
             {({ open }) => (
               <>
                 <dt className="text-lg">
@@ -425,7 +538,7 @@ const ExploreTheShore: NextPage = () => {
                   </Disclosure.Button>
                 </dt>
                 <Disclosure.Panel as="dd" className="mt-2 pr-12 border-t-2 pt-4">
-                  {explores.explore.activities.map((item) => (
+                  {explores.eat.drinks.map((item) => (
                     <div className="flex flex-col  pb-4" key={item.name}>
                       <span className="text-2xl">{item?.name}</span>
                       <span className="text-xl text-gray-400">{item?.description}</span>
@@ -436,7 +549,6 @@ const ExploreTheShore: NextPage = () => {
             )}
           </Disclosure>
         </dl>
-
       </div>
     </div>
   )

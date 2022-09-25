@@ -37,10 +37,10 @@ import {
 const Home: NextPage = () => {
   return (
     <div>
-      <div className="relative mt-8 z-50">
+      <div className="relative mt-8 z-10">
         <div className="absolute inset-x-8 bottom-0 h-1/2 bg-gray-100 rounded-3xl" />
           <div className="mx-auto max-w-9xl sm:px-6 lg:px-8 drop-shadow-lg">
-            <div className="relative shadow-md hover:shadow-2xl sm:overflow-hidden rounded-3xl transform transform-gpu hover:scale-110 transition-300 ease-in-out duration-300 top-0 hover:top-4">
+            <div className="relative shadow-md hover:shadow-2xl overflow-hidden rounded-3xl transform transform-gpu lg:hover:scale-110 lg:hover:top-4 transition-300 ease-in-out duration-300 top-0 group">
               <div className="absolute inset-0">
                 <img
                   className="h-full w-full object-cover"
@@ -50,8 +50,8 @@ const Home: NextPage = () => {
                 <div className="absolute inset-0 bg-blue-200 mix-blend-multiply" />
               </div>
               <div className="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8">
-                <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg">
-                  <span className="block text-white">Rob <em className="mr-3 text-7xl relative top-2">&amp;</em> Molly are</span>
+                <h1 className="text-center text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl drop-shadow-lg group-hover:scale-125 group-hover:drop-shadow-3xl transform-gpu duration-300">
+                  <span className="block text-white">Rob <em className="mr-3 text-5xl md:text-7xl relative md:top-1 group-hover:rotate-6">&amp;</em> Molly are</span>
                   <span className="block text-pink-300 mb-36"><em>getting married!</em></span>
                 </h1>
                 <p className="mx-auto block mt-24 max-w-lg text-center text-xl text-white sm:max-w-3xl drop-shadow-lg">
@@ -63,7 +63,7 @@ const Home: NextPage = () => {
                       href="/rsvp"
                     >
                       <a className="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-3 text-base font-medium text-blue-700 shadow-sm hover:bg-blue-50 sm:px-8">
-                        RSVP
+                        Soft-RSVP
                       </a>
                     </Link>
                     <Link
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
             showStatus={false}
             autoPlay={true}
             centerMode={true}
-            centerSlidePercentage={50}
+            centerSlidePercentage={75}
             infiniteLoop={true}
           >
             {homepageImages.map((image) => (

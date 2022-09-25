@@ -46,15 +46,6 @@ export default function Layout({ children }: Props) {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full bg-gray-100">
-        <body class="h-full">
-        ```
-      */}
-
       <div>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
@@ -70,7 +61,7 @@ export default function Layout({ children }: Props) {
               <div className="fixed inset-0 bg-gray-600 bg-opacity-75" />
             </Transition.Child>
 
-            <div className="fixed inset-0 z-40 flex">
+            <div className="fixed inset-0 z-100 flex">
               <Transition.Child
                 as={Fragment}
                 enter="transition ease-in-out duration-300 transform"
@@ -103,16 +94,18 @@ export default function Layout({ children }: Props) {
                   </Transition.Child>
                   <div className="h-0 flex-1 overflow-y-auto pt-5 pb-4">
                     <div className="flex flex-shrink-0 items-center px-4">
-                      <Link href="/">
+                      <Link href="/" onClick={() => setSidebarOpen(false)}>
                         <Image src="/logo.png" alt="Rob and Molly" width="481px" height="364px"/>
                       </Link>
                     </div>
                     <nav className="mt-5 space-y-1 px-2">
                       {navigation.map((item) => (
                         <Link
-                        key={`mobile-` + item.href}
-                        href={item.href}>
-                          <a className={classNames(
+                          key={`mobile-` + item.href}
+                          href={item.href}
+                          onClick={() => setSidebarOpen(false)}
+                        >
+                          <a onClick={() => setSidebarOpen(false)} className={classNames(
                             currentSlug === item.href  ? 'bg-pink-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
                             'group flex items-center px-2 py-2 text-sm font-medium rounded-md w-full block'
                           )}>
@@ -129,23 +122,6 @@ export default function Layout({ children }: Props) {
                       ))}
                     </nav>
                   </div>
-                  {/* <div className="flex flex-shrink-0 border-t border-gray-200 p-4">
-                    <Link href="/our-story" className="group block flex-shrink-0">
-                      <div className="flex items-center">
-                        <div>
-                          <img
-                            className="inline-block h-10 w-10 rounded-full"
-                            src="/rob-and-molly-profile.jpg"
-                            alt=""
-                          />
-                        </div>
-                        <div className="ml-3">
-                          <p className="text-sm font-medium text-gray-700 group-hover:text-gray-900"><em>via</em> Rob &amp; Molly</p>
-                          <p className="text-xs font-medium text-gray-500 group-hover:text-gray-700">Read our story</p>
-                        </div>
-                      </div>
-                    </Link>
-                  </div> */}
                 </Dialog.Panel>
               </Transition.Child>
               <div className="w-14 flex-shrink-0">{/* Force sidebar to shrink to fit close icon */}</div>
@@ -168,6 +144,7 @@ export default function Layout({ children }: Props) {
                   <Link
                     key={`desktop-` + item.href}
                     href={item.href}
+                    onClick={() => setSidebarOpen(false)}
                   >
                     <a className={classNames(
                       currentSlug === item.href  ? 'bg-pink-100 text-gray-900' : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900',
