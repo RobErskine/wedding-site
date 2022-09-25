@@ -6,6 +6,9 @@ import Link from 'next/link'
 const Registry: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Registry || Rob & Molly</title>
+      </Head>
       <h1 className="text-3xl font-bold mt-32 text-center">
         We haven&apos;t set up a registry yet, but we&apos;re working on it!
       </h1>

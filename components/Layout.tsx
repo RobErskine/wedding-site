@@ -1,6 +1,7 @@
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import Image from 'next/image'
+import Head from 'next/head'
 import Link from 'next/link'
 import {
   Bars3Icon,
@@ -8,11 +9,11 @@ import {
   MapPinIcon,
   PaperAirplaneIcon,
   HomeIcon,
-  InboxIcon,
   HeartIcon,
   XMarkIcon,
   QuestionMarkCircleIcon,
-  ShoppingBagIcon
+  ShoppingBagIcon,
+  EnvelopeIcon
 } from '@heroicons/react/24/outline'
 
 import Bottom from '../components/Footer'
@@ -27,6 +28,7 @@ const navigation = [
   { name: 'Explore the Shore', href: '/explore-the-shore', icon: MapPinIcon, current: false },
   { name: 'FAQ', href: '/faq', icon: QuestionMarkCircleIcon, current: false },
   { name: 'Registry', href: '/registry', icon: ShoppingBagIcon, current: false },
+  { name: 'Soft RSVP', href: '/rsvp', icon: EnvelopeIcon, current: false }
 ]
 
 function classNames(...classes: string[]) {
@@ -47,6 +49,10 @@ export default function Layout({ children }: Props) {
   return (
     <>
       <div>
+        <Head>
+          <title>Rob & Molly are getting married!</title>
+          <link rel="icon" type="image/jpg" href="/rob-and-molly-profile.jpg"></link>
+        </Head>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
             <Transition.Child

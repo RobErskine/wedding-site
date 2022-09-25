@@ -10,6 +10,9 @@ import {
 const Registry: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Thank you! || Rob & Molly</title>
+      </Head>
       <h1 className="text-3xl font-bold mt-64 text-center">
         Thanks for letting us know.
       </h1>

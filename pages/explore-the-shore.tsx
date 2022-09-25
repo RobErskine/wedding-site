@@ -24,7 +24,7 @@ const explores = {
           name: 'Manasquan',
           description: 'Daily badge $10. Oh, this is also where Rob proposed to Molly.',
           link: '',
-          image: ''
+          image: '/propose.jpeg'
         },
         {
           name: 'Belmar',
@@ -311,6 +311,9 @@ function CardImage(image: string, alt: string){
 const ExploreTheShore: NextPage = () => {
   return (
     <div className="bg-white">
+      <Head>
+        <title>Explore the Shore || Rob & Molly</title>
+      </Head>
       <div aria-hidden="true" className="relative">
         <img
           src="/beach.webp"
@@ -352,6 +355,7 @@ const ExploreTheShore: NextPage = () => {
                   {explores.explore.beaches.map((item) => {
                     return (
                       <div className="flex flex-col  pb-4" key={item.name}>
+                        <img src={item?.image} alt="" className="max-w-md rounded-2xl"/>
                         <span className="text-2xl">{item?.name}</span>
                         <span className="text-xl text-gray-400">{item?.description}</span>
                       </div>
@@ -394,7 +398,7 @@ const ExploreTheShore: NextPage = () => {
           </Disclosure>
         </dl>
 
-        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto">Food <em className="font-black mr-1">&amp;</em> Drink</h2>
+        <h2 className="text-3xl font-bold mt-8 max-w-4xl block mx-auto pl-4">Food <em className="font-black mr-1">&amp;</em> Drink</h2>
         <dl className="mt-4 space-y-6 divide-y divide-gray-200 border-2 border-gray-200 p-4 border-lg rounded-lg max-w-4xl mx-auto">
           <Disclosure as="div" className="" key="breakfast">
             {({ open }) => (

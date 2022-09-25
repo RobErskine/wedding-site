@@ -41,6 +41,9 @@ const Schedule: NextPage = () => {
 
   return (
     <div className="bg-white">
+      <Head>
+        <title>Schedule || Rob & Molly</title>
+      </Head>
       <div className="mx-auto max-w-2xl py-12 px-4 sm:px-6 sm:py-32 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">

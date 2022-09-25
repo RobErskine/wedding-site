@@ -37,6 +37,9 @@ import {
 const Home: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Rob & Molly</title>
+      </Head>
       <div className="relative mt-8 z-10">
         <div className="absolute inset-x-8 bottom-0 h-1/2 bg-gray-100 rounded-3xl" />
           <div className="mx-auto max-w-9xl sm:px-6 lg:px-8 drop-shadow-lg">

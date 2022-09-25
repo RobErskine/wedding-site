@@ -41,6 +41,9 @@ const faqs = [
 const FAQ: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Frequently Asked Questions || Rob & Molly</title>
+      </Head>
       <div className="bg-white">
         <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
           <div className="lg:grid lg:grid-cols-3 lg:gap-8">

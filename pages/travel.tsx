@@ -49,6 +49,9 @@ const automobiles = [
 const Travel: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Travel || Rob & Molly</title>
+      </Head>
       <main className="mx-auto mt-16 max-w-7xl px-4 sm:mt-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">

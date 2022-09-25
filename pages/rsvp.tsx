@@ -5,6 +5,9 @@ import Image from 'next/image'
 const RSVP: NextPage = () => {
   return (
     <form className="max-w-xl mx-auto mt-20" name="soft-rsvp" data-netlify="true" method="POST" action="/soft-rsvp-thanks">
+      <Head>
+        <title>Soft RSVP || Rob & Molly</title>
+      </Head>
       <input
         type="hidden"
         name="form-name"
@@ -14,7 +17,7 @@ const RSVP: NextPage = () => {
         Soft RSVP
       </h1>
       <p className="mb-6 text-lg text-gray-500">Knowing many will be traveling from out of state to the wedding, hoping to get a realistic headcount to share with vendors as we continue to plan our big day throughout the year.</p>
-      <p className="mb-8 text-sm text-gray-700">All fields required</p>
+      <p className="mb-8 text-sm text-gray-400">All fields required*</p>
       <div>
         <div className="mb-4">
           <label htmlFor="name" className="block text-sm font-medium text-gray-700">
@@ -48,9 +51,9 @@ const RSVP: NextPage = () => {
           <div className="flex h-5 items-center">
             <input id="subscribe" aria-describedby="subscribe-description" name="subscribe" type="checkbox" className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500" />
           </div>
-          <div className="ml-3 text-sm">
-            <label htmlFor="subscribe" className="font-medium text-gray-700">Want email updates?</label>
-            <span id="subscribe-description" className="text-gray-500"><span className="sr-only">Email updates: </span> We&apos;ll send updates every once in awhile</span>
+          <div className="ml-2 text-sm">
+            <label htmlFor="subscribe" className="font-medium text-gray-700 ">Want updates over email?</label>
+            <span id="subscribe-description" className="text-gray-400"><span className="sr-only">Email updates: </span> We&apos;ll send updates every once in awhile</span>
           </div>
         </div>
         <div className="mb-4">
