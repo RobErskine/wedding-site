@@ -52,6 +52,17 @@ export default function Layout({ children }: Props) {
         <Head>
           <title>Rob & Molly are getting married!</title>
           <link rel="icon" type="image/jpg" href="/rob-and-molly-profile.jpg"></link>
+          <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+          <meta name="description" content="Rob & Molly are getting married!" />
+          <meta name="keywords" content="Rob, Molly, Wedding, Wedding Website, Wedding Registry, Wedding RSVP, Wedding Schedule, Wedding Accomodations, Wedding Travel, Wedding FAQ, Wedding Explore the Shore" />
+          <meta name="author" content="Rob Erskine" />
+          <meta name="image" content="/share.jpg" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:site" content="@ErskineRob" />
+          <meta name="twitter:creator" content="@ErskineRob" />
+          <meta name="twitter:title" content="Rob & Molly are getting married!"/ >
+          <meta name="twitter:description" content="" />
+          <meta name="twitter:image" content="/share.png" />
         </Head>
         <Transition.Root show={sidebarOpen} as={Fragment}>
           <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>

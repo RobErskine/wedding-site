@@ -16,7 +16,7 @@ const RSVP: NextPage = () => {
       <h1 className="text-3xl font-bold mb-4">
         Soft RSVP
       </h1>
-      <p className="mb-6 text-lg text-gray-500">Knowing many will be traveling from out of state to the wedding, hoping to get a realistic headcount to share with vendors as we continue to plan our big day throughout the year.</p>
+      <p className="mb-6 text-lg text-gray-500">Knowing many will be traveling from out of state to the wedding, we are hoping to get a realistic headcount to share with vendors as we continue to plan our big day throughout the year. <br/>If you think you can make it, please let us know!</p>
       <p className="mb-8 text-sm text-gray-400">All fields required*</p>
       <div>
         <div className="mb-4">
@@ -29,7 +29,7 @@ const RSVP: NextPage = () => {
               name="name"
               id="name"
               className="block p-4 border border-grey-500 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="Bryce Harper"
+              placeholder="Bryce Harper, you are coming... right?"
             />
           </div>
         </div>
@@ -43,7 +43,7 @@ const RSVP: NextPage = () => {
               name="email"
               id="email"
               className="block w-full p-4 border border-grey-500 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="phanatic@phillies.com"
+              placeholder="phanatic@phillies.com... would be cool as heck as well"
             />
           </div>
         </div>
