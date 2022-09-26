@@ -10,6 +10,7 @@ const RSVP: NextPage = () => {
       </Head>
       <input
         type="hidden"
+
         name="form-name"
         value="soft-rsvp"
       />
@@ -29,7 +30,7 @@ const RSVP: NextPage = () => {
               name="name"
               id="name"
               className="block p-4 border border-grey-500 w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="Bryce Harper, you are coming... right?"
+              placeholder="Bryce Harper"
             />
           </div>
         </div>
@@ -43,7 +44,7 @@ const RSVP: NextPage = () => {
               name="email"
               id="email"
               className="block w-full p-4 border border-grey-500 rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-              placeholder="phanatic@phillies.com... would be cool as heck as well"
+              placeholder="phanatic@phillies.com"
             />
           </div>
         </div>

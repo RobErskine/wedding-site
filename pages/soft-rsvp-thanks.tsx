@@ -14,7 +14,7 @@ const Registry: NextPage = () => {
         <title>Thank you! || Rob & Molly</title>
       </Head>
       <h1 className="text-3xl font-bold mt-64 text-center">
-        Thanks for letting us know.
+        Thanks for letting us know!
       </h1>
       <p className="text-gray-500 text-xl mt-8 text-center mb-6">This is just the soft RSVP. We will send out a more formal RSVP closer to the actual date.</p>
       <div className="inline-flex mb-64 mx-auto justify-center items-center justify w-full">

@@ -13,7 +13,7 @@ import {
 const locations = [
   {
     name: 'The Asbury Hotel',
-    role: '(Our Wedding Venue, Room Block Details to Come)',
+    role: '(Our wedding venue, room block details to come)',
     imageUrl:
       '/accomodations/hotel.jpeg',
     bio: 'With a history shaped by artistic rebels and rock ‘n’ roll legends, the Asbury Park hotel sets the stage for an out-of-the-box getaway.',
