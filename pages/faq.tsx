@@ -9,7 +9,7 @@ const faqs = [
   },
   {
     question: 'Where should I stay and for how long?',
-    answer: 'Check out our accommodations page! We will be organizing a room block at the Asbury Hotel soon (too early to do so now) for those who don\'t plan on staying a while. We\'re hoping that a lot of our out of town guests can make a mini-vacation out of our wedding weekend, so would recommend booking a local AIrBnb or house rental in the area.'
+    answer: 'Check out our accommodations page! We will be organizing a room block at the Asbury Hotel soon (too early to do so now) for those who don\'t plan on staying a while. We\'re hoping that a lot of our out of town guests can make a mini-vacation out of our wedding weekend, so would recommend booking a local AirBnb or house rental in the area.'
   },
   {
     question: 'What should I do if I cannot make it?',
