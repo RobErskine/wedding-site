@@ -42,7 +42,7 @@ const explores = {
       activities: [
         {
           name: 'Silverball Pinball Museum',
-          description: 'This is the first spot Molly took Rob when he came to visit her hometown. She may have regreted it as they stayed until he played every single Baseball game in the museum.',
+          description: 'This is the first spot Molly took Rob when he came to visit her hometown. She may have regretted it as they stayed until he played every single Baseball game in the museum.',
           link: 'https://www.silverballmuseum.com/asbury-park/',
           image: ''
         },
