@@ -65,10 +65,10 @@ const RSVP: NextPage = () => {
             id="canAttend"
             name="canAttend"
             className="mt-1 block p-4 py-6 border border-grey-500 w-full rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-            defaultValue="Yes! I'll be there"
+            defaultValue="Yes! I'll be there."
           >
-            <option>Yes! I&apos;ll be there.</option>
-            <option>Hmm, need to see.</option>
+            <option>Yes! Can&apos;t wait. I&apos;ll be there.</option>
+            <option>Sounds fun, but I need a little time to figure out logistics.</option>
             <option>Sorry, won&apos;t be able to make it!</option>
           </select>
         </div>
