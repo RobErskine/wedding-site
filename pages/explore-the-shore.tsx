@@ -159,7 +159,7 @@ const explores = {
         },
         {
           name: 'Lubranos Trattoria',
-          description: 'A classical McCann favorite.',
+          description: 'A classic McCann favorite.',
           link: '',
           image:''
         },
