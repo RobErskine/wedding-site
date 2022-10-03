@@ -1,0 +1,5 @@
+Built with love by Rob Erskine!
+Rob@RobErskine.com
+https://roberskine.com
+
+Built with Next.js and Tailwind, deployed to Netlify.
