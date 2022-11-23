@@ -16,7 +16,7 @@ const locations = [
     role: '(Our wedding venue! 210 5th Ave, Asbury Park, NJ 07712)',
     imageUrl:
       '/accomodations/hotel.jpeg',
-    bio: '<a href="https://be.synxis.com/?Hotel=38151&Chain=6052&arrive=2023-08-19&depart=2023-08-21&adult=1&child=0&group=MOLLYANDROB" target="_blank" class="text-blue-600 underline">Room Block details can be found here</a>.\n\nWith a history shaped by artistic rebels and rock ‘n’ roll legends, the Asbury Park hotel sets the stage for an out-of-the-box getaway.',
+    bio: 'Rooms are reserved for both Saturday 8/19/23 and Sunday 8/20/23. If you plan to book Saturday the 19th, there is a 2 night minimum required. If you only plan to stay Sunday (wedding day) there are no minimums required.<br/><br/><a href="https://be.synxis.com/?Hotel=38151&Chain=6052&arrive=2023-08-19&depart=2023-08-21&adult=1&child=0&group=MOLLYANDROB" target="_blank" class="text-blue-600 underline">Room Block details can be found here</a>.<br/><br/>With a history shaped by artistic rebels and rock ‘n’ roll legends, the Asbury Park hotel sets the stage for an out-of-the-box getaway.',
     websiteUrl: 'https://www.theasburyhotel.com/',
     googleMapsUrl: 'https://www.google.com/maps/dir//The+Asbury+Hotel,+210+Fifth+Ave,+Asbury+Park,+NJ+07712/@40.2236111,-74.0038554,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x89c2266a4633c6af:0xe5cfe7d64c5ba075!2m2!1d-74.0016667!2d40.2236111!3e0',
   },
